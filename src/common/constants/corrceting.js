@@ -1,0 +1,10 @@
+
+
+export const GET_QUES_LIST_START = "GET_QUES_LIST_START";
+export const GET_QUES_LIST_SUCCESS = "GET_QUES_LIST_SUCCESS";
+export const GET_QUES_LIST_FAIL = "GET_QUES_LIST_FAIL";
+
+
+
+
+
