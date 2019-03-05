@@ -1,14 +1,12 @@
 // import axios from 'axios'
 import * as actionTypes from '../constants/corrceting';
 
-export const getQuesList = (data) => {
-  return dispatch => {
-   return  Ajax.default.get({url:'/movie/top250'} ).then(data => {
-     console.log(data)
+export const getQuesList = (data)=>dispatch => {
+  dispatch(getQuesListStart(data));
+   return  Ajax.get({url:'test.json'}).then(data => {
       dispatch(getQuesListSuccess(data));
       return data
     });
-  };
 };
 
 function getQuesListStart(data) {

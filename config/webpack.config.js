@@ -312,14 +312,14 @@ module.exports = function(webpackEnv) {
           test: /\.(js|mjs|jsx)$/,
           enforce: 'pre',
           use: [
-            {
-              options: {
-                formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                eslintPath: require.resolve('eslint'),
+            // {
+            //   options: {
+            //     formatter: require.resolve('react-dev-utils/eslintFormatter'),
+            //     eslintPath: require.resolve('eslint'),
                 
-              },
-              loader: require.resolve('eslint-loader'),
-            },
+            //   },
+            //   loader: require.resolve('eslint-loader'),
+            // },
           ],
           include: paths.appSrc,
         },
@@ -510,7 +510,7 @@ module.exports = function(webpackEnv) {
     plugins: [
       //ajax
       new webpack.ProvidePlugin({
-        Ajax: path.join(__dirname, "../src/client/data/index.js"),
+        Ajax: [path.join(__dirname, "../src/client/data/index.js"),'default'],
       }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(

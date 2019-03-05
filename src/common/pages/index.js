@@ -20,13 +20,12 @@ class CommonIndex extends Component {
   }
   render() {
     return (
-    	<span>zuoye</span>
+    	<span>zuoyea</span>
       );
   }
 }
 export default connect(
   state => {
-    console.log(state)
       return { questionInfoList: state };
   },
   dispatch => {
