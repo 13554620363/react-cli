@@ -22,7 +22,9 @@ let argv = process.argv.slice(2);
 
 function isInGitRepository() {
   try {
-    execSync('git rev-parse --is-inside-work-tree', { stdio: 'ignore' });
+    execSync('git rev-parse --is-inside-work-tree', {
+      stdio: 'ignore'
+    });
     return true;
   } catch (e) {
     return false;
@@ -31,7 +33,9 @@ function isInGitRepository() {
 
 function isInMercurialRepository() {
   try {
-    execSync('hg --cwd . root', { stdio: 'ignore' });
+    execSync('hg --cwd . root', {
+      stdio: 'ignore'
+    });
     return true;
   } catch (e) {
     return false;
