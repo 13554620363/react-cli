@@ -9,7 +9,7 @@ class CommonIndex extends Component {
     this.state = {
       currIndex: '',
       visible: false,
-      headerName: '练习'
+      headerName: '练习1111111111'
     };
   }
   componentDidMount(){
