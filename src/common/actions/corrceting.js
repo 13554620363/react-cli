@@ -1,9 +1,11 @@
-// import axios from 'axios'
+import axios from 'axios'
 import * as actionTypes from '../constants/corrceting';
 
 export const getQuesList = (data)=>dispatch => {
   dispatch(getQuesListStart(data));
-   return  Ajax.get({url:'test.json'}).then(data => {
+  let url = "/v1/addUser?myinput=fff"
+  // let url = "/api/auction/banner"
+  return axios.get(url).then(data => {
       dispatch(getQuesListSuccess(data));
       return data
     });

@@ -11,16 +11,16 @@ const CommonIndex = createRouter({
 
 
 export default {
-	title: '作业',
+	title: '我的博客',
 	path: '/',
 	routes:[{
-		title: 'test',
-		path: '/test',
+		title: '个人主页',
+		path: '/setting',
 		component: CommonIndex,
 	},
 	{
-		title: 'a',
-		path: '/a',
+		title: '首页',
+		path: '/home',
 		component: Correcting,
 	}
 	]
