@@ -11,7 +11,7 @@ app.get("/v1/addUser", function (request, response) {
   }
   var addUser = new User(data)
   addUser.save()
-  response.send(JSON.stringify(data))
+  response.send({data:true1})
 })
 var server = app.listen(8081, function () {
   var host = server.address().address
